@@ -6,7 +6,8 @@
   "dependencies": {
     "axios": "^0.17.1",
     "hapi": "^16.6.2",
-    "makemehapi": "^7.0.0"
+    "makemehapi": "^7.0.0",
+    "through2-map": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^4.16.0",
