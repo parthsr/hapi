@@ -4,11 +4,11 @@ let server = new hapi.Server();
 
 server.connection({
   host: 'localhost',
-  port: 3000,
+  port: Number(process.argv[2] || 8080),
 });
 
 const handle = (request, reply) => {
-  reply('hi this is parth');
+  reply('Hello hapi');
 };
 server.route({ path: '/', method: 'GET', handler: handle });
 server.start((err) => {

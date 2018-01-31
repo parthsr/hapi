@@ -2,7 +2,7 @@ const http = require('http');
 // const solution = require('./solution');
 
 const promise = new Promise((resolve) => {
-  http.get('http://localhost:3000/', (res) => {
+  http.get('http://localhost:8080/', (res) => {
     res.on('data', (chunk) => {
       data = chunk.toString();
       resolve(data);
