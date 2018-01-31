@@ -4,7 +4,8 @@ let server = new hapi.Server();
 
 server.connection({
   host: 'localhost',
-  port: Number(process.argv[2] || 8080),
+  // port: Number(process.argv[2] || 8080),
+  port: 3000,
 });
 
 const handle = (request, reply) => {
