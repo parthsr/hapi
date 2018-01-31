@@ -10,4 +10,5 @@ const promise = new Promise((resolve) => {
 
 describe('tessting the use case first', () => {
   it('this is test case 1 for checking what is being returned', () => promise.then((value) => { expect(value).toBe('Hello parth'); }));
+  it('this is test case 1 for checking what is being returned', () => promise.then((value) => { expect(value).not.toBe('Hello partsddh'); }));
 });
