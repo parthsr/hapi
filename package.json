@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.17.1",
     "hapi": "^16.6.2",
     "makemehapi": "^7.0.0"
   },
