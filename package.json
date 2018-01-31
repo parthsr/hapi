@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "hapi": "^16.6.2",
+    "inert": "^4.2.1",
     "makemehapi": "^7.0.0",
     "through2-map": "^3.0.0"
   },
