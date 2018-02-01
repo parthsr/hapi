@@ -4,7 +4,7 @@ const hapi = require('hapi');
 const server = new hapi.Server();
 server.connection({
   host: 'localhost',
-  port: process.argv[2] || 8080,
+  port: 3000,
 });
 server.register(inert, (err) => {
   if (err) throw err;
