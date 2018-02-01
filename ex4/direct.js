@@ -28,6 +28,8 @@ server.route({
   },
 });
 
-server.start(() => {
-  console.log('Server created at:', server.info.uri);
-});
+// server.start(() => {
+//   console.log('Server created at:', server.info.uri);
+// });
+
+module.exports = server;

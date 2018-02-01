@@ -1,4 +1,5 @@
 const http = require('http');
+const server = require('./direct');
 
 const promise = new Promise((resolve) => {
   http.get('http://localhost:8080/foo/bar/baz/index.html', (res) => {
@@ -9,6 +10,10 @@ const promise = new Promise((resolve) => {
   });
 });
 
+const option = {
+  method: 'GET',
+  url: '/',
+};
 const f =
 `<html>
     <head><title>Hello Directories</title></head>
@@ -20,4 +25,11 @@ const f =
 
 describe('checking the use case by using http.get', () => {
   it('checking if the value that is recieved is right', () => promise.then(value => expect(value).toBe(f)));
+  it('checking using injection', (done) => {
+    server.inject(option, (response) => {
+      expect(response.statusCode).toBe(f);
+      done();
+    });
+  });
 });
+
