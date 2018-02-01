@@ -1,5 +1,6 @@
 const Hapi = require('hapi');
 const Inert = require('inert');
+const path = require('path');
 
 const server = new Hapi.Server();
 
@@ -10,7 +11,7 @@ server.register(Inert, (err) => {
 server.connection({
   host: 'localhost',
   // port: Number(process.argv[2] || 8080),
-  port: 8080,
+  port: Number(8080),
 });
 
 // const logger = (request, reply) => {
@@ -23,7 +24,7 @@ server.route({
   handler: {
     // logger,
     directory: {
-      path: './public',
+      path: path.join(__dirname, 'public'),
     },
   },
 });
