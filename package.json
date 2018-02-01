@@ -8,6 +8,7 @@
     "hapi": "^16.6.2",
     "inert": "^4.2.1",
     "makemehapi": "^7.0.0",
+    "require": "^2.4.20",
     "through2-map": "^3.0.0"
   },
   "devDependencies": {
