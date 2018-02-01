@@ -3,7 +3,7 @@ const http = require('http');
 const promise = new Promise((resolve) => {
   http.get('http://localhost:8080/', (res) => {
     res.on('data', (chunk) => {
-      data = chunk.toString();
+      const data = chunk.toString();
       resolve(data);
     });
   });
