@@ -11,7 +11,7 @@ server.register(Inert, (err) => {
 server.connection({
   host: 'localhost',
   // port: Number(process.argv[2] || 8080),
-  port: Number(8080),
+  port: Number(process.argv[2] || 8080),
 });
 
 // const logger = (request, reply) => {
@@ -29,8 +29,8 @@ server.route({
   },
 });
 
-// server.start(() => {
-//   console.log('Server created at:', server.info.uri);
-// });
+server.start(() => {
+  console.log('Server created at:', server.info.uri);
+});
 
 module.exports = server;
