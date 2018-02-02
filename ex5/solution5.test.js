@@ -29,11 +29,11 @@ describe('checking the use case by using http.get', () => {
       done();
     });
   });
-//   it('checking using injection result', (done) => {
-//     server.inject(option, (response) => {
-//       expect(response.result).toBe(f);
-//       done();
-//     });
-//   });
+  it('checking using injection result', (done) => {
+    server.inject(option, (response) => {
+      expect(response.result).toBe(f);
+      done();
+    });
+  });
 });
 
