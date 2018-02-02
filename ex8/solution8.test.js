@@ -8,7 +8,8 @@ const option = {
 const output = 'Gur Chefhvg bs Uncv-arff';
 
 describe('checking the use case by using http.get', () => {
-  // it('checking if the value that is recieved is right', () => promise.then(value => expect(value).toBe(f)));
+  // it('checking if the value that is recieved is right',
+  // () => promise.then(value => expect(value).toBe(f)));
   it('checking using injection', (done) => {
     server.inject(option, (response) => {
       expect(response.statusCode).toBe(200);
