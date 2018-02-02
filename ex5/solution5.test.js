@@ -14,7 +14,7 @@ const option = {
   method: 'GET',
   url: '/?name=handling',
 };
-const f =
+const output =
 `<html>
     <head><title>Hello handling</title></head>
     <body>
@@ -31,7 +31,7 @@ describe('checking the use case by using http.get', () => {
   });
   it('checking using injection result', (done) => {
     server.inject(option, (response) => {
-      expect(response.result).toBe(f);
+      expect(response.result).toBe(output);
       done();
     });
   });
